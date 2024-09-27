@@ -1,11 +1,37 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicious Bites Restaurant</title>
     <style>
         * {
-    margin: 0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        #home{
+        height: 800px;
+        margin: 0px;
+        padding: 0px;
+        color: black;
+        background-image: url("3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        text-align: center;
+        font-size: xx-large;
+        justify-items: center;
+        animation-name: bg;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+
+    #home h1{
+        padding-top: 320px;
+        text-align: center;
+    }
         body {
             font-family: cursive;
             line-height: 1.6;
@@ -20,30 +46,9 @@
             color: #fff;
         }
 
-        .logo {
+        .navbar .logo {
             font-size: 24px;
             font-weight: bold;
-        }
-
-        #home {
-            height: 600px;
-            margin: 0px;
-            padding: 0px;
-            color: black;
-            background-image: url("3.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: grid;
-            justify-content: space-evenly;
-            font-size: 32px;
-            justify-items: center;
-            animation-name: bg;
-            animation-duration: 10s;
-            animation-iteration-count: infinite;
-        }
-
-        #home h1 {
-            padding-top: 240px;
         }
 
         .nav-menu {
@@ -65,203 +70,96 @@
             color: #ffd700;
         }
 
-        .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px auto;
-            background-color: #fff;
-            transition: all 0.3s ease;
-        }
+         #menu{
+        background-image: url("4.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #list{
+        list-style-type: none;
+    }
 
-        #menu {
-            background-image: url("4.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+    #Order{
+        background-image: url("4.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 
-        #Order {
-            background-image: url("4.jpg");
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-
-        #cust {
-            border: none;
-            background-color: transparent;
-        }
+    #cust{
+        border: none;
+        background-color: transparent;
+    }
 
         section {
-            padding: 32px 0;
-        }
-
-        #menu, #Order, #contact {
             display: none;
+            padding: 50px;
         }
 
-        footer {
-            height: 100px;
-            background-color: #333;
+        #home {
+            display: block;
+            background-color: #f2f2f2;
         }
 
-        .footer {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            column-gap: 17px;
-            padding-top: 15px;
-            font-size: 32px;
-        }
+        footer{
+        height: 100px;
+        background-color: #333;
+    }
 
-        .footer a {
-            text-decoration: none;
-        }
+     .footer{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        column-gap: 17px;
+        padding-top: 15px;
+        font-size: x-large;
+    }
 
-        #rights {
-            font-family: none;
-            color: white;
-            text-align: center;
-        }
+    .footer a{
+        text-decoration: none;
+    }
 
-        @media (max-width: 500px) {
-            .navbar {
-                display: block;
-                list-style: none;
-            }
-            .logo {
-                text-align: center;
-                font-size: 24px;
-                font-weight: bold;
-            }
-            .nav-menu {
-                margin-left: -20px;
-                list-style: none;
-            }
-        }
+    #rights{
+        font-family: none;
+        color: white;
+        text-align: center;
+    }
 
-        .contact-section {
-            max-width: 100%;
-            margin: 48px auto;
-            padding: 32px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
 
-        .contact-section h1 {
-            font-size: 40px;
-            color: #ff6347;
-            text-align: center;
-            margin-bottom: 24px;
-        }
-
-        .contact-section p {
-            text-align: center;
-            margin-bottom: 32px;
-        }
-
-        .contact-form-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 32px;
-        }
-
-        form {
-            width: 55%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        form label {
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        form input[type="text"],
-        form input[type="email"],
-        form input[type="tel"],
-        form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        form input[type="submit"] {
-            background-color: #ff6347;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 19px;
-            align-self: flex-start;
-        }
-
-        form input[type="submit"]:hover {
-            background-color: #e5533d;
-        }
-
-        .contact-details {
-            width: 40%;
-        }
-
-        .contact-details h3 {
-            font-size: 24px;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        .contact-details p {
-            margin-bottom: 8px;
-            font-size: 18px;
-        }
-
-        .social-links {
+   @media (max-width: 485px) {
+       .navbar {
+            display: block;
             list-style: none;
-            display: flex;
-            gap: 10px;
-            padding: 0;
         }
-
-        .social-links li a {
-            text-decoration: none;
-            font-size: 24px;
-            transition: color 0.3s ease;
-        }
-
-        .social-links li a:hover {
-            color: #ff6347;
-        }
-
-        .location-map {
-            margin-top: 32px;
-        }
-
-        .location-map h3 {
+        .logo {
             text-align: center;
-            margin-bottom: 16px;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
+        .nav-menu{
+            place-content: center;
+            list-style: none;
+        }
+        #Order{
+            background-color: white;
+        }
+    }
 
-        .location-map iframe {
-            border: none;
-            border-radius: 8px;
-        }
-    </style></head>
+</style>
+</head>
 <body>
+
     <header>
         <nav class="navbar">
-            <div class="logo">₾  Delicious Bites</div>
+            <div class="logo">₾ Delicious Bites</div>
             <ul class="nav-menu">
                 <li><a href="#home" onclick="home()">Home</a></li>
                 <li><a href="#menu" onclick="menu()">Menu</a></li>
-                <li><a href="#about" onclick="about()">Order</a></li>
+                <li><a href="#order" onclick="Order()">Order</a></li>
                 <li><a href="#contact" onclick="contact()">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <section id="home">
             <h1>Welcome to Delicious Bites</h1>
@@ -274,7 +172,7 @@
 
             <div class="menu-category">
                 <h2>Appetizers</h2>
-                <ul>
+                <ul id="list">
                     <li>Bruschetta - ₹150</li>
                     <li>Garlic Bread - ₹120</li>
                     <li>Spring Rolls - ₹180</li>
@@ -284,7 +182,7 @@
 
             <div class="menu-category">
                 <h2>Main Course</h2>
-                <ul>
+                <ul id="list">
                     <li>Grilled Chicken - ₹350</li>
                     <li>Veggie Pasta - ₹300</li>
                     <li>Paneer Tikka Masala - ₹280</li>
@@ -294,7 +192,7 @@
 
             <div class="menu-category">
                 <h2>Desserts</h2>
-                <ul>
+                <ul id="list">
                     <li>Chocolate Lava Cake - ₹180</li>
                     <li>Gulab Jamun - ₹90</li>
                     <li>Fruit Salad - ₹150</li>
@@ -304,7 +202,7 @@
 
             <div class="menu-category">
                 <h2>Beverages</h2>
-                <ul>
+                <ul id="list">
                     <li>Lemon Iced Tea - ₹80</li>
                     <li>Mojito - ₹120</li>
                     <li>Cold Coffee - ₹100</li>
@@ -314,7 +212,7 @@
 
         </section>
 
-        <section id="Order">
+         <section id="Order">
             <h1>Order now!</h1>
             <p>Pay 50/- extra and Delivery in 30 min!!!</p>
             <form id="order-form" target="scripts.js" method="post">
@@ -364,7 +262,8 @@
             </form>
         </section>
 
-        <section id="contact"   >
+
+         <section id="contact"   >
               <h1>Contact Us</h1>
             <p>We'd love to hear from you! Reach out to us for reservations, inquiries, or feedback.</p>
 
@@ -414,6 +313,7 @@
             </div>
         </section>
     </main>
+
     <footer >
         <ul class="footer">
             <li><a href="https://www.instagram.com" alt="Instagram">📸</a></li>
@@ -423,39 +323,41 @@
         </ul>
         <p id="rights">All rights reserved for Delicious bites</p>
     </footer>
-    <script> 
+
+    <script>
         function home(){
             document.getElementById('home').style.display = 'grid';
             document.getElementById('menu').style.display = 'none';
             document.getElementById('Order').style.display = 'none';
             document.getElementById('contact').style.display = 'none';
         }
-        function menu(){
+function menu(){
             document.getElementById('home').style.display = 'none';
             document.getElementById('menu').style.display = 'block';
             document.getElementById('Order').style.display = 'none';
             document.getElementById('contact').style.display = 'none';
         }
-        function about(){
+function Order(){
             document.getElementById('home').style.display = 'none';
             document.getElementById('menu').style.display = 'none';
             document.getElementById('Order').style.display = 'block';
             document.getElementById('contact').style.display = 'none';
         }
-        function contact(){ 
+function contact(){ 
             document.getElementById('home').style.display = 'none';
             document.getElementById('menu').style.display = 'none';
             document.getElementById('Order').style.display = 'none';
             document.getElementById('contact').style.display = 'block';
         }
-        function placed(){
-            alert("Order is placed!!!");
-        }
+function placed(){
+    alert("Order is placed!!!");
+    }
     
-        function response(){
-            alert("Thank you for your response!!!");
-        }
+function response(){
+    alert("Thank you for your response!!!");
+    }
 
     </script>
+
 </body>
 </html>
